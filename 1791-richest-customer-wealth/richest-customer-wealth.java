@@ -8,11 +8,10 @@ class Solution {
                 tot+=accounts[i][j] ;
                   
                       }
-                       if(tot>highestWealth){
-                        highestWealth=tot;
+                  highestWealth=Math.max(highestWealth,tot);
                 }
+                      return highestWealth;
     
         }
-        return highestWealth;
+  
     }
-}
