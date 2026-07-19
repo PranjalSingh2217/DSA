@@ -1,7 +1,8 @@
 class Solution {
     public int[] sortedSquares(int[] nums) {
         sqr(nums);
-        insertionsort(nums);
+        Arrays.sort(nums);
+        // insertionsort(nums);
         return nums;
     
     }
