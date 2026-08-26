@@ -2,9 +2,7 @@ class MinStack {
 
         ArrayList<Integer> main=new ArrayList<>();
         ArrayList<Integer> sub=new ArrayList<>();
-    public MinStack() {
-        
-    }
+
     
     public void push(int value) {
         main.add(value);
