@@ -6,32 +6,18 @@ class Solution {
             stu.add(students[i]);
             sand.add(sandwiches[i]);
         }
-
-    while(true){
-                boolean target=false;
-           for(int n:stu){
-            if(sand.size()==0){
-                return 0;
+        int count=0;
+        while(!stu.isEmpty() && count<stu.size()){
+            if(sand.peek()==stu.peek()){
+                sand.remove();
+                stu.remove();
+                count=0;
             }
-            else if(sand.peek()==n){
-                target=true;
-                break;
+            else{
+                stu.add(stu.remove());
+                count++;
             }
         }
-        if(!target){
-            return stu.size();
-        }
-
-        if(sand.peek()==stu.peek()){
-            sand.remove();
-            stu.remove();
-        }
-        else{
-            int val=stu.peek();
-            stu.remove();
-            stu.add(val);        }
-
-    }
-
-    }
+    return count;
+}
 }
